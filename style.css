@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url(images/LibreFranklin-VariableFont_wght.ttf) format("truetype");
+}
+:root {
+    /* ### Primary */
+    --Blue: hsl(223, 87%, 63%);
+    
+    /* ### Secondary */
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+
+    /* ### Neutral */
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+
+    /* font family */
+    --ff-libre: 'Libre Franklin';
+
+    /* font-size */
+    --fs-200: 20px;
+
+    /* font-weight */
+    --fw-300: 300;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+.ff-libre {
+    font-family: var(--ff-libre);
+}
+.fs-200 {
+    font-size: var(--fs-200);
+}
+.fw-300 {
+    font-weight: var(--fw-300);
+}
+.fw-600 {
+    font-weight: var(--fw-600);
+}
+.fw-700 {
+    font-weight: var(--fw-700);
+}
+.bg-body {
+    background: white;
+}
+.text-color {
+    color: var(--Gray);
+}
+.text-dark {
+    color: var(--Very-Dark-Blue);
+}
+.flex {
+    display: flex;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+h1, h2, h3, h4, h5, p {
+    font-weight: 300;
+}
+input, 
+button,
+textarea,
+select {
+    font: inherit;
+}
+body {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+.container {
+    width: 90%;
+    max-width: 375px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.logo {
+    margin: 3rem auto 2rem;
+}
+.preview > h2 {
+    margin: 0 auto .7rem;
+}
+.preview > p {
+    margin: 0 auto 1rem;
+}
+.email {
+    flex-direction: column;
+    margin: 2rem auto 4rem;
+}
+.email * {
+    width: 100%;
+    margin: 0 auto .5rem;
+    border-radius: 50px;
+    outline: none;
+    padding: .5rem 1rem;
+}
+.email > input {
+    padding-left: 2rem;
+    border: 2px solid var(--Pale-Blue);
+}
+.email > input::placeholder {
+    color: var(--Pale-Blue);
+}
+.email > button {
+    color: #fff;
+    background: var(--Blue);
+    border: 2px solid var(--Blue);
+    font-weight: var(--fw-700);
+    cursor: pointer;
+}
+button:hover,
+button:focus {
+    opacity: .7;
+}
+footer {
+    background: var(--Blue);
+    color: #fff;
+    width: 200%;
+    margin: 10rem 0 0 0;   
+}
+.icons {
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.icons * {
+    width: 20px;
+    margin: 1rem;
+    cursor: pointer;
+}
+footer > p {
+    margin-bottom: 1rem;
+}
+/* .email > div > span {
+    color: var(--Light-Red);
+    font-size: 14px; */
+/* } */
+@media (min-width: 40rem) {
+    .container {
+        width: 90%;
+        max-width: 800px;
+    }
+    .email {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .email > input {
+        width: 74%;
+        font-size: 15px;
+        padding-left: 1rem;
+    }
+    .email > button {
+        width: 35%;
+        font-size: 15px;
+    }
+}
